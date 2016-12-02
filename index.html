@@ -10,54 +10,60 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<title>This is the title</title>
+	<title>{{ name }}'s Profile</title>
 </head>
 <body>
-	<span style="font-weight:bold">[name] Profile</span>
-	<p>Update your settings for your alerts. Don't forget to hit submit</p>
+	<div class="container">
+		<h1>{{ name }}'s Profile</h1>
+		<h3><small>Update your settings for your alerts. Don't forget to hit submit</small></h3>
+	</div>
 	
-	<form class="form-horizontal">
-		<div class="form-group">
-			<label for="firstName" class="col-sm-2 control-label">First Name*</label>
-			<div class="col-sm-3">
-				<input id="firstName" class="form-control" type="text" placeholder="First Name">
+	<div class="container">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="firstName" class="col-sm-2 control-label">First Name*</label>
+				<div class="col-sm-3">
+					<input id="firstName" name="firstName" class="form-control" type="text" placeholder="First Name">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="lastName" class="col-sm-2 control-label">Last Name*</label>
-			<div class="col-sm-3">
-				<input id="lastName" class="form-control" type="text" placeholder="Last Name">
+			<div class="form-group">
+				<label for="lastName" class="col-sm-2 control-label">Last Name*</label>
+				<div class="col-sm-3">
+					<input id="lastName" name="lastName" class="form-control" type="text" placeholder="Last Name">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="city" class="col-sm-2 control-label">City*</label>
-			<div class="col-sm-3">
-				<input id="city" class="form-control" type="text" placeholder="Fullerton">
+			<div class="form-group">
+				<label for="city" class="col-sm-2 control-label">City*</label>
+				<div class="col-sm-3">
+					<input id="city" name="city" class="form-control" type="text" placeholder="Fullerton">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="state" class="col-sm-2 control-label">State*</label>
-			<div class="col-sm-3">
-				<input id="state" class="form-control" type="text" placeholder="CA">
+			<div class="form-group">
+				<label for="state" class="col-sm-2 control-label">State*</label>
+				<div class="col-sm-3">
+					<input id="state" name="state" class="form-control" type="text" placeholder="CA">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="temp" class="col-sm-2 control-label">Temperature in Fahrenheit*</label>
-			<div class="col-sm-3">
-				<input id="temp" class="form-control" type="text" placeholder="75">
+			<div class="form-group">
+				<label for="temp" class="col-sm-2 control-label">Temperature in Fahrenheit*</label>
+				<div class="col-sm-3">
+					<input id="temp" name="temp" class="form-control" type="text" placeholder="75">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="alert" class="col-sm-2 control-label">Alert Time*</label>
-			<div class="col-sm-3">
-				<input id="alert" class="form-control" type="text" placeholder="9:00AM">
+			<div class="form-group">
+				<label for="alert" class="col-sm-2 control-label">Alert Time*</label>
+				<div class="col-sm-3">
+					<input id="alert_time" name="alert_time" class="form-control" type="text" placeholder="9:00AM">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="submitbtn" class="col-sm-2 control-label">Submit</label>
-			<button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>
-		</div>
-	</form>
+			<div class="form-group">
+				<label for="submitbtn" class="col-sm-2 control-label">Submit</label>
+				<div class="col-sm-3">
+					<button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
 </body>
 

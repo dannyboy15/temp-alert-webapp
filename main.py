@@ -20,7 +20,36 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('Hello, World!')
 
+class web_app(webapp2.RequestHandler):
+    def get(self):
+    	if self.request.get("foo") != '':
+    		self.response.headers['Content-Type'] = 'text/plain'
+        	self.response.write(self.request.get("firstName"))
+        	self.response.write(self.request.get("lastName"))
+        	self.response.write(self.request.get("city"))
+        	self.response.write(self.request.get("state"))
+        	self.response.write(self.request.get("temp"))
+        	self.response.write(self.request.get("alert_time"))
+
+
+        else:
+        	self.response.headers['Content-Type'] = 'text/html'
+        	with open('index.html', 'r') as view:	
+        		self.response.write(view.read())
+
+class web_app_s(webapp2.RequestHandler):
+    def get(self, s):
+    	self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write(s)
+    	# self.response.headers['Content-Type'] = 'text/html'
+     #    with open('submit.html', 'r') as view2:	
+     #    	self.response.write(view2.read())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/webapp', web_app),
+    # ('/webapp', web_app),
+    
 ], debug=True)
+
